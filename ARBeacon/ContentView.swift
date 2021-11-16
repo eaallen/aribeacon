@@ -10,6 +10,7 @@ import RealityKit
 
 struct ContentView : View {
     var body: some View {
+        // yeet
         // tap on the camera view to see AR block!
         return ARViewContainer().edgesIgnoringSafeArea(.all)
     }

@@ -15,6 +15,8 @@
 		681995532743EE91007FA69F /* ARBeaconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681995522743EE91007FA69F /* ARBeaconTests.swift */; };
 		6819955D2743EE91007FA69F /* ARBeaconUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6819955C2743EE91007FA69F /* ARBeaconUITests.swift */; };
 		6819955F2743EE91007FA69F /* ARBeaconUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6819955E2743EE91007FA69F /* ARBeaconUITestsLaunchTests.swift */; };
+		68B9427B2743FAF10009D2F9 /* OpenTrivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B9427A2743FAF10009D2F9 /* OpenTrivia.swift */; };
+		68B9427E2743FB590009D2F9 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B9427D2743FB590009D2F9 /* StringUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		681995582743EE91007FA69F /* ARBeaconUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARBeaconUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6819955C2743EE91007FA69F /* ARBeaconUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARBeaconUITests.swift; sourceTree = "<group>"; };
 		6819955E2743EE91007FA69F /* ARBeaconUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARBeaconUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		68B9427A2743FAF10009D2F9 /* OpenTrivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenTrivia.swift; sourceTree = "<group>"; };
+		68B9427D2743FB590009D2F9 /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +100,10 @@
 		6819953E2743EE90007FA69F /* ARBeacon */ = {
 			isa = PBXGroup;
 			children = (
+				68B9427C2743FB3B0009D2F9 /* Utils */,
 				6819953F2743EE90007FA69F /* AppDelegate.swift */,
 				681995412743EE90007FA69F /* ContentView.swift */,
+				68B9427A2743FAF10009D2F9 /* OpenTrivia.swift */,
 				681995432743EE90007FA69F /* Experience.rcproject */,
 				681995452743EE91007FA69F /* Assets.xcassets */,
 				681995472743EE91007FA69F /* Preview Content */,
@@ -128,6 +134,14 @@
 				6819955E2743EE91007FA69F /* ARBeaconUITestsLaunchTests.swift */,
 			);
 			path = ARBeaconUITests;
+			sourceTree = "<group>";
+		};
+		68B9427C2743FB3B0009D2F9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				68B9427D2743FB590009D2F9 /* StringUtils.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +274,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68B9427B2743FAF10009D2F9 /* OpenTrivia.swift in Sources */,
+				68B9427E2743FB590009D2F9 /* StringUtils.swift in Sources */,
 				681995422743EE90007FA69F /* ContentView.swift in Sources */,
 				681995402743EE90007FA69F /* AppDelegate.swift in Sources */,
 				681995442743EE90007FA69F /* Experience.rcproject in Sources */,
