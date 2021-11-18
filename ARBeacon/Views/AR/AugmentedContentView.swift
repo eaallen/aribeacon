@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  AugmentedContentView.swift
 //  ARBeacon
 //
 //  Created by Gove Allen on 11/16/21.
@@ -8,7 +8,7 @@
 import SwiftUI
 import RealityKit
 
-struct ContentView : View {
+struct AugmentedContentView : View {
     var body: some View {
         // tap on the camera view to see AR block!
         return ARViewContainer().edgesIgnoringSafeArea(.all)
@@ -22,10 +22,14 @@ struct ARViewContainer: UIViewRepresentable {
         let arView = ARView(frame: .zero)
         
         // Load the "Box" scene from the "Experience" Reality File
-        let boxAnchor = try! Experience.loadBox()
+//        let boxAnchor = try! Experience.loadBox()
+        
+        //let plack = try! Experience.loadScene()
+        
+        let rona = try! Experience.loadRona()
         
         // Add the box anchor to the scene
-        arView.scene.anchors.append(boxAnchor)
+        arView.scene.anchors.append(rona)
         
         return arView
         
@@ -36,9 +40,9 @@ struct ARViewContainer: UIViewRepresentable {
 }
 
 #if DEBUG
-struct ContentView_Previews : PreviewProvider {
+struct AugmentedContentView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView()
+        AugmentedContentView()
     }
 }
 #endif
