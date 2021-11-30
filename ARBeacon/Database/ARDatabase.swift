@@ -7,6 +7,7 @@
 
 import Foundation
 import GRDB
+import CSQLite
 
 class ARDatabase {
     
@@ -38,30 +39,30 @@ class ARDatabase {
     // 1. Open a database connection
 //    let dbQueue = try DatabaseQueue(path: "/path/to/database.sqlite")
 
-    // 2. Define the database schema
-    try dbQueue.write { db in
-        try db.create(table: "player") { t in
-            t.autoIncrementedPrimaryKey("id")
-            t.column("name", .text).notNull()
-            t.column("score", .integer).notNull()
-        }
-    }
-
-    // 3. Define a record type
-    struct Test: Codable, FetchableRecord, PersistableRecord {
-        var id: Int64
-        var content: String
-    }
-
-    // 4. Access the database
-    try dbQueue.write { db in
-        try Player(id: 3, content: "Test #3").insert(db)
-        try Player(id: 4, content: "Test #4").insert(db)
-    }
-
-    let players: [Player] = try dbQueue.read { db in
-        try Player.fetchAll(db)
-    }
+//    // 2. Define the database schema
+//    try dbQueue.write { db in
+//        try db.create(table: "player") { t in
+//            t.autoIncrementedPrimaryKey("id")
+//            t.column("name", .text).notNull()
+//            t.column("score", .integer).notNull()
+//        }
+//    }
+//
+//    // 3. Define a record type
+//    struct Test: Codable, FetchableRecord, PersistableRecord {
+//        var id: Int64
+//        var content: String
+//    }
+//
+//    // 4. Access the database
+//    try dbQueue.write { db in
+//        try Player(id: 3, content: "Test #3").insert(db)
+//        try Player(id: 4, content: "Test #4").insert(db)
+//    }
+//
+//    let players: [Player] = try dbQueue.read { db in
+//        try Player.fetchAll(db)
+//    }
 }
 
 //class ARDatabase {

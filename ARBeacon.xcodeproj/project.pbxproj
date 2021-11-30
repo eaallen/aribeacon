@@ -255,7 +255,6 @@
 				F8C7A5068A531FC6400B1288 /* Pods-ARBeacon.debug.xcconfig */,
 				0DF21920348AEAA1EE115676 /* Pods-ARBeacon.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -353,7 +352,7 @@
 			);
 			mainGroup = 681995332743EE90007FA69F;
 			packageReferences = (
-				DB83B1B32754A05500285BC9 /* XCRemoteSwiftPackageReference "GRDB.swift.git" */,
+				DB83B1B32754A05500285BC9 /* XCRemoteSwiftPackageReference "GRDB.swift" */,
 			);
 			productRefGroup = 6819953D2743EE90007FA69F /* Products */;
 			projectDirPath = "";
@@ -610,10 +609,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ARBeacon/Preview Content\"";
-				DEVELOPMENT_TEAM = DP8A74YR7Z;
+				DEVELOPMENT_TEAM = KJAZ5NGQ72;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -629,8 +629,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.eaallen.ARBeacon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.analytico.ARBeacon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -643,10 +644,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ARBeacon/Preview Content\"";
-				DEVELOPMENT_TEAM = DP8A74YR7Z;
+				DEVELOPMENT_TEAM = KJAZ5NGQ72;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -662,8 +664,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.eaallen.ARBeacon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.analytico.ARBeacon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -808,7 +811,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DB83B1B32754A05500285BC9 /* XCRemoteSwiftPackageReference "GRDB.swift.git" */ = {
+		DB83B1B32754A05500285BC9 /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/groue/GRDB.swift.git";
 			requirement = {
@@ -821,7 +824,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		DB83B1B42754A05500285BC9 /* GRDB */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DB83B1B32754A05500285BC9 /* XCRemoteSwiftPackageReference "GRDB.swift.git" */;
+			package = DB83B1B32754A05500285BC9 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
 			productName = GRDB;
 		};
 /* End XCSwiftPackageProductDependency section */

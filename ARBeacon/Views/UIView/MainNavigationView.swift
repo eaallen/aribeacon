@@ -35,6 +35,7 @@ struct MainNavigationView: View {
                     Label("Account", systemImage: "person")
                 }
         }
+//        .foregroundColor(Color.yellow)
     }
 }
 
