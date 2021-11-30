@@ -10,7 +10,7 @@ import SwiftUI
 struct ControlBoard: View {
     var body: some View {
         VStack {
-            NavigationView{
+            NavigationView {
                 Form {
                     Section(header: Text("Pick an Experience")){
                         NavigationLink("Augment Your Reality", destination: {

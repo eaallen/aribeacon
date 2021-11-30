@@ -19,6 +19,14 @@
 		68B9427E2743FB590009D2F9 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B9427D2743FB590009D2F9 /* StringUtils.swift */; };
 		68B942812746AE9F0009D2F9 /* ControlBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B942802746AE9F0009D2F9 /* ControlBoard.swift */; };
 		68B942852746AF390009D2F9 /* IBeaconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B942842746AF390009D2F9 /* IBeaconView.swift */; };
+		B22FD94DB7D2A6CBF381CC3F /* Pods_ARBeacon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38397B08D473411B4D5A5DC0 /* Pods_ARBeacon.framework */; };
+		DB83B18627546A9B00285BC9 /* MainNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB83B18527546A9A00285BC9 /* MainNavigationView.swift */; };
+		DB83B1A7275474C200285BC9 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB83B1A6275474C200285BC9 /* TaskView.swift */; };
+		DB83B1A9275474DA00285BC9 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB83B1A8275474DA00285BC9 /* HelpView.swift */; };
+		DB83B1AB275474F000285BC9 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB83B1AA275474F000285BC9 /* AccountView.swift */; };
+		DB83B1AD2754752400285BC9 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB83B1AC2754752400285BC9 /* MapView.swift */; };
+		DB83B1B227549B4300285BC9 /* ARDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB83B1B127549B4300285BC9 /* ARDatabase.swift */; };
+		DB83B1B52754A05500285BC9 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = DB83B1B42754A05500285BC9 /* GRDB */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DF21920348AEAA1EE115676 /* Pods-ARBeacon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARBeacon.release.xcconfig"; path = "Target Support Files/Pods-ARBeacon/Pods-ARBeacon.release.xcconfig"; sourceTree = "<group>"; };
+		38397B08D473411B4D5A5DC0 /* Pods_ARBeacon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARBeacon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6819953C2743EE90007FA69F /* ARBeacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARBeacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6819953F2743EE90007FA69F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		681995412743EE90007FA69F /* AugmentedContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AugmentedContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +64,13 @@
 		68B9427D2743FB590009D2F9 /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		68B942802746AE9F0009D2F9 /* ControlBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlBoard.swift; sourceTree = "<group>"; };
 		68B942842746AF390009D2F9 /* IBeaconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBeaconView.swift; sourceTree = "<group>"; };
+		DB83B18527546A9A00285BC9 /* MainNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationView.swift; sourceTree = "<group>"; };
+		DB83B1A6275474C200285BC9 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+		DB83B1A8275474DA00285BC9 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		DB83B1AA275474F000285BC9 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		DB83B1AC2754752400285BC9 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		DB83B1B127549B4300285BC9 /* ARDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDatabase.swift; sourceTree = "<group>"; };
+		F8C7A5068A531FC6400B1288 /* Pods-ARBeacon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARBeacon.debug.xcconfig"; path = "Target Support Files/Pods-ARBeacon/Pods-ARBeacon.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB83B1B52754A05500285BC9 /* GRDB in Frameworks */,
+				B22FD94DB7D2A6CBF381CC3F /* Pods_ARBeacon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +107,8 @@
 				681995512743EE91007FA69F /* ARBeaconTests */,
 				6819955B2743EE91007FA69F /* ARBeaconUITests */,
 				6819953D2743EE90007FA69F /* Products */,
+				E13BA9A4EAA572EF6B1D8F71 /* Pods */,
+				9308526043D59C6A82C500E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +125,7 @@
 		6819953E2743EE90007FA69F /* ARBeacon */ = {
 			isa = PBXGroup;
 			children = (
+				DB83B1B027549B1500285BC9 /* Database */,
 				68B942872746B0CB0009D2F9 /* Model */,
 				68B942862746B0C00009D2F9 /* ViewModel */,
 				68B9427F2746AE740009D2F9 /* Views */,
@@ -153,6 +175,7 @@
 		68B9427F2746AE740009D2F9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DB83B18427546A6300285BC9 /* UIView */,
 				68B942832746AF170009D2F9 /* ibeacon */,
 				68B942822746AF0F0009D2F9 /* AR */,
 				68B942802746AE9F0009D2F9 /* ControlBoard.swift */,
@@ -190,6 +213,51 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		9308526043D59C6A82C500E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38397B08D473411B4D5A5DC0 /* Pods_ARBeacon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB83B18427546A6300285BC9 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				DB83B1A5275474AB00285BC9 /* TabViews */,
+				DB83B18527546A9A00285BC9 /* MainNavigationView.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		DB83B1A5275474AB00285BC9 /* TabViews */ = {
+			isa = PBXGroup;
+			children = (
+				DB83B1A6275474C200285BC9 /* TaskView.swift */,
+				DB83B1A8275474DA00285BC9 /* HelpView.swift */,
+				DB83B1AA275474F000285BC9 /* AccountView.swift */,
+				DB83B1AC2754752400285BC9 /* MapView.swift */,
+			);
+			path = TabViews;
+			sourceTree = "<group>";
+		};
+		DB83B1B027549B1500285BC9 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				DB83B1B127549B4300285BC9 /* ARDatabase.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		E13BA9A4EAA572EF6B1D8F71 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8C7A5068A531FC6400B1288 /* Pods-ARBeacon.debug.xcconfig */,
+				0DF21920348AEAA1EE115676 /* Pods-ARBeacon.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -197,15 +265,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 681995622743EE91007FA69F /* Build configuration list for PBXNativeTarget "ARBeacon" */;
 			buildPhases = (
+				1269C72BA5508A497FBCAD45 /* [CP] Check Pods Manifest.lock */,
 				681995382743EE90007FA69F /* Sources */,
 				681995392743EE90007FA69F /* Frameworks */,
 				6819953A2743EE90007FA69F /* Resources */,
+				84D10B67F8718C1EFDF9C611 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ARBeacon;
+			packageProductDependencies = (
+				DB83B1B42754A05500285BC9 /* GRDB */,
+			);
 			productName = ARBeacon;
 			productReference = 6819953C2743EE90007FA69F /* ARBeacon.app */;
 			productType = "com.apple.product-type.application";
@@ -278,6 +351,9 @@
 				Base,
 			);
 			mainGroup = 681995332743EE90007FA69F;
+			packageReferences = (
+				DB83B1B32754A05500285BC9 /* XCRemoteSwiftPackageReference "GRDB.swift" */,
+			);
 			productRefGroup = 6819953D2743EE90007FA69F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -315,18 +391,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1269C72BA5508A497FBCAD45 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ARBeacon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84D10B67F8718C1EFDF9C611 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ARBeacon/Pods-ARBeacon-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ARBeacon/Pods-ARBeacon-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ARBeacon/Pods-ARBeacon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		681995382743EE90007FA69F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB83B1A7275474C200285BC9 /* TaskView.swift in Sources */,
+				DB83B1AD2754752400285BC9 /* MapView.swift in Sources */,
 				68B942812746AE9F0009D2F9 /* ControlBoard.swift in Sources */,
 				68B9427B2743FAF10009D2F9 /* OpenTrivia.swift in Sources */,
+				DB83B1A9275474DA00285BC9 /* HelpView.swift in Sources */,
+				DB83B1AB275474F000285BC9 /* AccountView.swift in Sources */,
+				DB83B18627546A9B00285BC9 /* MainNavigationView.swift in Sources */,
 				68B9427E2743FB590009D2F9 /* StringUtils.swift in Sources */,
 				681995422743EE90007FA69F /* AugmentedContentView.swift in Sources */,
 				68B942852746AF390009D2F9 /* IBeaconView.swift in Sources */,
 				681995402743EE90007FA69F /* AppDelegate.swift in Sources */,
 				681995442743EE90007FA69F /* Experience.rcproject in Sources */,
+				DB83B1B227549B4300285BC9 /* ARDatabase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,13 +605,15 @@
 		};
 		681995632743EE91007FA69F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8C7A5068A531FC6400B1288 /* Pods-ARBeacon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ARBeacon/Preview Content\"";
-				DEVELOPMENT_TEAM = DP8A74YR7Z;
+				DEVELOPMENT_TEAM = KJAZ5NGQ72;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -497,13 +623,15 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.eaallen.ARBeacon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.analytico.ARBeacon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -512,13 +640,15 @@
 		};
 		681995642743EE91007FA69F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DF21920348AEAA1EE115676 /* Pods-ARBeacon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ARBeacon/Preview Content\"";
-				DEVELOPMENT_TEAM = DP8A74YR7Z;
+				DEVELOPMENT_TEAM = KJAZ5NGQ72;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -528,13 +658,15 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.eaallen.ARBeacon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.analytico.ARBeacon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -677,6 +809,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB83B1B32754A05500285BC9 /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB83B1B42754A05500285BC9 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB83B1B32754A05500285BC9 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 681995342743EE90007FA69F /* Project object */;
 }
