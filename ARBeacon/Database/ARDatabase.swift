@@ -7,6 +7,7 @@
 
 import Foundation
 import GRDB
+import CSQLite
 
 class ARDatabase {
     

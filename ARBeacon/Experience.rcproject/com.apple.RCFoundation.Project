@@ -10,88 +10,7 @@
                 "name" : "surface"
               },
               "behaviors" : [
-                {
-                  "__content" : [
-                    {
-                      "accessibility" : {
-                        "__content" : [
-                          {
-                            "isEnabled" : false
-                          }
-                        ],
-                        "__version" : 1
-                      },
-                      "actionGroups" : [
-                        {
-                          "__content" : [
-                            {
-                              "configurations" : [
-                                {
-                                  "__content" : [
-                                    {
-                                      "configurationBox" : {
-                                        "configuration" : {
-                                          "force" : [
-                                            0,
-                                            5,
-                                            0
-                                          ],
-                                          "target" : [
-                                            "3788A5B5-0388-488A-8304-7B90FEBA6FAC"
-                                          ]
-                                        },
-                                        "name" : {
-                                          "type" : "physics"
-                                        }
-                                      },
-                                      "identifier" : "9DD07AA4-8396-4472-A2AD-4DF9335077F4",
-                                      "isEnabled" : true
-                                    }
-                                  ],
-                                  "__version" : 1
-                                }
-                              ],
-                              "identifier" : "4091DA32-95EA-4A4D-B0EC-5F2D9F0BF1A3",
-                              "isEnabled" : true
-                            }
-                          ],
-                          "__version" : 1
-                        }
-                      ],
-                      "color" : [
-                        0.364705890417099,
-                        0.74117648601531982,
-                        0.69019609689712524,
-                        1
-                      ],
-                      "identifier" : "A418B1CF-8BC0-461D-A1CF-8C27ABBDA6C9",
-                      "isEnabled" : true,
-                      "isLooping" : false,
-                      "isModal" : false,
-                      "name" : "Behavior",
-                      "triggers" : [
-                        {
-                          "__content" : [
-                            {
-                              "configurationBox" : {
-                                "configuration" : {
-                                  "target" : [
-                                    "3788A5B5-0388-488A-8304-7B90FEBA6FAC"
-                                  ]
-                                },
-                                "name" : "tapTarget"
-                              },
-                              "identifier" : "F5F24A36-C67B-4219-B070-3D92C0924EB3",
-                              "isEnabled" : true
-                            }
-                          ],
-                          "__version" : 1
-                        }
-                      ]
-                    }
-                  ],
-                  "__version" : 3
-                }
+
               ],
               "gravity" : [
                 0,
@@ -137,20 +56,6 @@
                           {
                             "typeName" : "String",
                             "value" : "Steel Box"
-                          }
-                        ],
-                        [
-                          "rigidBody-enabled",
-                          {
-                            "typeName" : "Bool",
-                            "value" : true
-                          }
-                        ],
-                        [
-                          "rigidBody-motionType",
-                          {
-                            "typeName" : "REMotionType",
-                            "value" : "dynamic"
                           }
                         ]
                       ]
@@ -204,7 +109,7 @@
                   0.1389566957950592,
                   0,
                   -0.73070567846298218,
-                  0.20909130573272705,
+                  0.20909129083156586,
                   -0.64988446235656738,
                   0,
                   -2.3810110092163086,
@@ -811,7 +716,7 @@
                           "bevelRadius",
                           {
                             "typeName" : "Double",
-                            "value" : 0.0034999999999999996
+                            "value" : 0.0035000000000000001
                           }
                         ],
                         [
@@ -897,7 +802,7 @@
                           "bevelRadius",
                           {
                             "typeName" : "Double",
-                            "value" : 0.0034999999999999996
+                            "value" : 0.0035000000000000001
                           }
                         ],
                         [
@@ -983,7 +888,7 @@
                           "bevelRadius",
                           {
                             "typeName" : "Double",
-                            "value" : 0.0034999999999999988
+                            "value" : 0.0034999999999999996
                           }
                         ],
                         [
@@ -1069,7 +974,7 @@
                           "bevelRadius",
                           {
                             "typeName" : "Double",
-                            "value" : 0.0034999999999999996
+                            "value" : 0.0035000000000000001
                           }
                         ],
                         [

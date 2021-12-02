@@ -9,13 +9,7 @@ import SwiftUI
 
 struct HelpView: View {
     var body: some View {
-
-        
-        VStack(spacing: 0) {
-            TopHeader(currentTab: "Help")
-            Spacer()
-            Text("Help View")
-        }.edgesIgnoringSafeArea(.top)
+        Text("Help View")
     }
 }
 
