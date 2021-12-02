@@ -9,7 +9,12 @@ import SwiftUI
 
 struct AccountView: View {
     var body: some View {
-        Text("Account View")
+//        Text("Account View")
+        
+        VStack(spacing: 0) {
+            TopHeader(currentTab: "Account")
+            Spacer()
+        }.edgesIgnoringSafeArea(.top)
     }
 }
 
