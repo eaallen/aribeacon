@@ -2,12 +2,12 @@
   "object": {
     "pins": [
       {
-        "package": "CodeScanner",
-        "repositoryURL": "https://github.com/twostraws/CodeScanner",
+        "package": "GRDB",
+        "repositoryURL": "https://github.com/groue/GRDB.swift.git",
         "state": {
-          "branch": "main",
-          "revision": "8a9ce909a4ea502d4a2ccf327ae8c16b7e48e740",
-          "version": null
+          "branch": null,
+          "revision": "6dc7367853cde4efe7d94888980bd50dc73211ea",
+          "version": "5.14.0"
         }
       }
     ]

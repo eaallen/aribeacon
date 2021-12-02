@@ -9,10 +9,7 @@ import SwiftUI
 
 struct MapView: View {
     var body: some View {
-        VStack(spacing: 0) {
-            TopHeader(currentTab: "Map")
-            Spacer()
-        }.edgesIgnoringSafeArea(.top)
+        Text("Map View")
     }
 }
 
