@@ -26,7 +26,11 @@
 		DB83B1AB275474F000285BC9 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB83B1AA275474F000285BC9 /* AccountView.swift */; };
 		DB83B1AD2754752400285BC9 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB83B1AC2754752400285BC9 /* MapView.swift */; };
 		DB83B1B227549B4300285BC9 /* ARDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB83B1B127549B4300285BC9 /* ARDatabase.swift */; };
-		DB83B1B52754A05500285BC9 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = DB83B1B42754A05500285BC9 /* GRDB */; };
+		DBC44918275725360075E6F1 /* QRCodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC44917275725360075E6F1 /* QRCodeScannerView.swift */; };
+		DBC4491B275727A70075E6F1 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = DBC4491A275727A70075E6F1 /* CodeScanner */; };
+		DBC4491E27572FC30075E6F1 /* ColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC4491D27572FC30075E6F1 /* ColorHex.swift */; };
+		DBC449212757487E0075E6F1 /* AppSetupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC449202757487E0075E6F1 /* AppSetupModel.swift */; };
+		DBC4492327574AF20075E6F1 /* AppSetupVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC4492227574AF20075E6F1 /* AppSetupVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +74,10 @@
 		DB83B1AA275474F000285BC9 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		DB83B1AC2754752400285BC9 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		DB83B1B127549B4300285BC9 /* ARDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDatabase.swift; sourceTree = "<group>"; };
+		DBC44917275725360075E6F1 /* QRCodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerView.swift; sourceTree = "<group>"; };
+		DBC4491D27572FC30075E6F1 /* ColorHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHex.swift; sourceTree = "<group>"; };
+		DBC449202757487E0075E6F1 /* AppSetupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppSetupModel.swift; path = ARBeacon/AppSetupModel.swift; sourceTree = SOURCE_ROOT; };
+		DBC4492227574AF20075E6F1 /* AppSetupVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppSetupVM.swift; path = ARBeacon/AppSetupVM.swift; sourceTree = SOURCE_ROOT; };
 		F8C7A5068A531FC6400B1288 /* Pods-ARBeacon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARBeacon.debug.xcconfig"; path = "Target Support Files/Pods-ARBeacon/Pods-ARBeacon.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB83B1B52754A05500285BC9 /* GRDB in Frameworks */,
+				DBC4491B275727A70075E6F1 /* CodeScanner in Frameworks */,
 				B22FD94DB7D2A6CBF381CC3F /* Pods_ARBeacon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				68B9427D2743FB590009D2F9 /* StringUtils.swift */,
+				DBC4491D27572FC30075E6F1 /* ColorHex.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -202,6 +211,7 @@
 		68B942862746B0C00009D2F9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DBC4492227574AF20075E6F1 /* AppSetupVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -209,6 +219,7 @@
 		68B942872746B0CB0009D2F9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DBC449202757487E0075E6F1 /* AppSetupModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -224,6 +235,7 @@
 		DB83B18427546A6300285BC9 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				DBC4491C27572D7C0075E6F1 /* Camera */,
 				DB83B1A5275474AB00285BC9 /* TabViews */,
 				DB83B18527546A9A00285BC9 /* MainNavigationView.swift */,
 			);
@@ -247,6 +259,14 @@
 				DB83B1B127549B4300285BC9 /* ARDatabase.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		DBC4491C27572D7C0075E6F1 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				DBC44917275725360075E6F1 /* QRCodeScannerView.swift */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 		E13BA9A4EAA572EF6B1D8F71 /* Pods */ = {
@@ -277,7 +297,7 @@
 			);
 			name = ARBeacon;
 			packageProductDependencies = (
-				DB83B1B42754A05500285BC9 /* GRDB */,
+				DBC4491A275727A70075E6F1 /* CodeScanner */,
 			);
 			productName = ARBeacon;
 			productReference = 6819953C2743EE90007FA69F /* ARBeacon.app */;
@@ -352,7 +372,7 @@
 			);
 			mainGroup = 681995332743EE90007FA69F;
 			packageReferences = (
-				DB83B1B32754A05500285BC9 /* XCRemoteSwiftPackageReference "GRDB.swift" */,
+				DBC44919275727A70075E6F1 /* XCRemoteSwiftPackageReference "CodeScanner" */,
 			);
 			productRefGroup = 6819953D2743EE90007FA69F /* Products */;
 			projectDirPath = "";
@@ -439,18 +459,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB83B1A7275474C200285BC9 /* TaskView.swift in Sources */,
+				DBC4491E27572FC30075E6F1 /* ColorHex.swift in Sources */,
 				DB83B1AD2754752400285BC9 /* MapView.swift in Sources */,
 				68B942812746AE9F0009D2F9 /* ControlBoard.swift in Sources */,
+				DBC4492327574AF20075E6F1 /* AppSetupVM.swift in Sources */,
 				68B9427B2743FAF10009D2F9 /* OpenTrivia.swift in Sources */,
 				DB83B1A9275474DA00285BC9 /* HelpView.swift in Sources */,
 				DB83B1AB275474F000285BC9 /* AccountView.swift in Sources */,
 				DB83B18627546A9B00285BC9 /* MainNavigationView.swift in Sources */,
+				DBC44918275725360075E6F1 /* QRCodeScannerView.swift in Sources */,
 				68B9427E2743FB590009D2F9 /* StringUtils.swift in Sources */,
 				681995422743EE90007FA69F /* AugmentedContentView.swift in Sources */,
 				68B942852746AF390009D2F9 /* IBeaconView.swift in Sources */,
 				681995402743EE90007FA69F /* AppDelegate.swift in Sources */,
 				681995442743EE90007FA69F /* Experience.rcproject in Sources */,
 				DB83B1B227549B4300285BC9 /* ARDatabase.swift in Sources */,
+				DBC449212757487E0075E6F1 /* AppSetupModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,7 +640,7 @@
 				DEVELOPMENT_TEAM = KJAZ5NGQ72;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs to use the camera to scan QR codes and view AR objects";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
@@ -651,7 +675,7 @@
 				DEVELOPMENT_TEAM = KJAZ5NGQ72;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs to use the camera to scan QR codes and view AR objects";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
@@ -811,21 +835,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DB83B1B32754A05500285BC9 /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
+		DBC44919275727A70075E6F1 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/groue/GRDB.swift.git";
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DB83B1B42754A05500285BC9 /* GRDB */ = {
+		DBC4491A275727A70075E6F1 /* CodeScanner */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DB83B1B32754A05500285BC9 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
-			productName = GRDB;
+			package = DBC44919275727A70075E6F1 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
