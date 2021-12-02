@@ -7,3 +7,6 @@ ARBeacon.xcodeproj/project.pbxproj
 *.xcuserstate
 ARBeacon.xcodeproj
 ARBeacon.xcworkspace
+*.xcworkspace
+*.xcodeproj/
+DerivedData/
