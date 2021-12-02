@@ -17,6 +17,7 @@
 		6819955F2743EE91007FA69F /* ARBeaconUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6819955E2743EE91007FA69F /* ARBeaconUITestsLaunchTests.swift */; };
 		68A2A8672758930D00D7A675 /* covid19.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 68A2A8662758930D00D7A675 /* covid19.usdz */; };
 		68A2A86B2758940600D7A675 /* ARModelHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A2A86A2758940600D7A675 /* ARModelHandler.swift */; };
+		68A2A8702758B65300D7A675 /* BeaconDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A2A86F2758B65300D7A675 /* BeaconDetector.swift */; };
 		68B9427B2743FAF10009D2F9 /* OpenTrivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B9427A2743FAF10009D2F9 /* OpenTrivia.swift */; };
 		68B9427E2743FB590009D2F9 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B9427D2743FB590009D2F9 /* StringUtils.swift */; };
 		68B942812746AE9F0009D2F9 /* ControlBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B942802746AE9F0009D2F9 /* ControlBoard.swift */; };
@@ -68,6 +69,8 @@
 		6819955E2743EE91007FA69F /* ARBeaconUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARBeaconUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		68A2A8662758930D00D7A675 /* covid19.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = covid19.usdz; sourceTree = "<group>"; };
 		68A2A86A2758940600D7A675 /* ARModelHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ARModelHandler.swift; path = ARBeacon/Model/ARModelHandler.swift; sourceTree = SOURCE_ROOT; };
+		68A2A86D2758B0F200D7A675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		68A2A86F2758B65300D7A675 /* BeaconDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconDetector.swift; sourceTree = "<group>"; };
 		68B9427A2743FAF10009D2F9 /* OpenTrivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenTrivia.swift; sourceTree = "<group>"; };
 		68B9427D2743FB590009D2F9 /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		68B942802746AE9F0009D2F9 /* ControlBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlBoard.swift; sourceTree = "<group>"; };
@@ -137,6 +140,8 @@
 		6819953E2743EE90007FA69F /* ARBeacon */ = {
 			isa = PBXGroup;
 			children = (
+				68A2A86E2758B62E00D7A675 /* Beacon */,
+				68A2A86D2758B0F200D7A675 /* Info.plist */,
 				68A2A86C2758943F00D7A675 /* Model */,
 				68A2A865275892E900D7A675 /* ARModelAssets */,
 				DB83B1B027549B1500285BC9 /* Database */,
@@ -144,7 +149,6 @@
 				68B9427F2746AE740009D2F9 /* Views */,
 				68B9427C2743FB3B0009D2F9 /* Utils */,
 				6819953F2743EE90007FA69F /* AppDelegate.swift */,
-				68B9427A2743FAF10009D2F9 /* OpenTrivia.swift */,
 				681995432743EE90007FA69F /* Experience.rcproject */,
 				681995452743EE91007FA69F /* Assets.xcassets */,
 				681995472743EE91007FA69F /* Preview Content */,
@@ -192,6 +196,14 @@
 				68A2A86A2758940600D7A675 /* ARModelHandler.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		68A2A86E2758B62E00D7A675 /* Beacon */ = {
+			isa = PBXGroup;
+			children = (
+				68A2A86F2758B65300D7A675 /* BeaconDetector.swift */,
+			);
+			path = Beacon;
 			sourceTree = "<group>";
 		};
 		68B9427C2743FB3B0009D2F9 /* Utils */ = {
@@ -270,6 +282,7 @@
 		DB83B1B027549B1500285BC9 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				68B9427A2743FAF10009D2F9 /* OpenTrivia.swift */,
 				DB83B1B127549B4300285BC9 /* ARDatabase.swift */,
 			);
 			path = Database;
@@ -466,6 +479,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBC44929275867B20075E6F1 /* AppSetupViewModel.swift in Sources */,
+				68A2A8702758B65300D7A675 /* BeaconDetector.swift in Sources */,
 				DB83B1A7275474C200285BC9 /* TaskView.swift in Sources */,
 				DB83B1AD2754752400285BC9 /* MapView.swift in Sources */,
 				68B942812746AE9F0009D2F9 /* ControlBoard.swift in Sources */,
@@ -648,10 +662,13 @@
 				DEVELOPMENT_TEAM = DP8A74YR7Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ARBeacon/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We use Ibeacons to play this game!";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Enable ibeacons to play the game!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = "bluetooth-le arkit";
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -683,10 +700,13 @@
 				DEVELOPMENT_TEAM = DP8A74YR7Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ARBeacon/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We use Ibeacons to play this game!";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Enable ibeacons to play the game!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = "bluetooth-le arkit";
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
