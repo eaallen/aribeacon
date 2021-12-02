@@ -27,7 +27,7 @@ struct AppSetupModel {
 //
 //    func getCurrentTab(id: Int) {
 //
-////        if let index:Int = tabs.firstIndex(where: {$0.id == id})
+//      if let index:Int = tabs.firstIndex(where: {$0.id == id})
 //        var currentTab: String = UserDefaults.standard.set(tabs[id-1].tabName, forKey: currentTabKey)
 //
 //

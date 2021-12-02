@@ -11,11 +11,9 @@ import SwiftUI
 
 
 struct IBeaconView: View {
-    @State private var beaconDetector:BeaconDetector? = nil
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/).onAppear(){
-            beaconDetector = BeaconDetector()
-        }
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 

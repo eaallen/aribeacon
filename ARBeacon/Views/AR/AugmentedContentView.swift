@@ -18,17 +18,22 @@ struct AugmentedContentView : View {
             
             ARViewContainer().edgesIgnoringSafeArea(.all)
             Text(translateProximity(beaconDetector.beaconDistance))
+                .font(.headline)
+                .padding()
+                .background(.white.opacity(0.5))
         }
     }
     
-    func translateProximity(_ distance: CLProximity)->String{
+    func translateProximity(_ distance: CLProximity)->String {
         switch distance {
         case .unknown:
             return ""
         case .far:
             return "Warm"
         case .near:
-            showModel.toggle()
+            if !showModel {
+                showModel = true
+            }
             return "Hot"
         case .immediate:
             return "You should look behind you."
@@ -71,6 +76,7 @@ struct ARViewContainer: UIViewRepresentable {
             layout.columns.3.x = 0
             layout.columns.3.y = 0.5
             layout.columns.3.z = 2
+            
             
             let anchorEntity = AnchorEntity(world: layout)
             anchorEntity.addChild(modelEntity.clone(recursive: true))
