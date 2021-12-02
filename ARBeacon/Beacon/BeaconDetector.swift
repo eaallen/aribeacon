@@ -55,22 +55,6 @@ class BeaconDetector: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     func updateDistance(_ distance: CLProximity) {
         beaconDistance = distance
-        switch distance {
-        case .unknown:
-            print("unknown")
-        case .far:
-            print("far")
-            
-        case .near:
-            print("near")
-            
-        case .immediate:
-            print("immediate")
-        default:
-            print("error!")
-        }
-        
-        
     }
     
     func startScanning() {
