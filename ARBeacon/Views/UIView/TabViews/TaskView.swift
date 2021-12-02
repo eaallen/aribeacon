@@ -9,58 +9,44 @@ import SwiftUI
 
 struct TaskView: View {
     
-//    @ObservedObject var appContent: AppSetupVM
+    @ObservedObject var taskContent: TaskViewModel
     
     var body: some View {
         
-        VStack(spacing: 0) {
-            TopHeader(currentTab: "Tasks")
-            Spacer()
-        }.edgesIgnoringSafeArea(.top)
-        
-//        ForEach(appContent.cards) { card in
+        ZStack {
+            VStack(spacing: 0) {
+                TopHeader(currentTab: "Tasks")
+                Spacer()
+                List {
+                    NavigationLink("Find the Covid Molecule", destination: AugmentedContentView())
+                    ForEach(0..<50) { task in
+                        NavigationLink("\(task)", destination: MapView())
+                    }
+                }
+                HStack {
+                    Text("Complete the tasks to help stop Covid-19")
+                        .padding()
+                        .font(.system(size: 18, weight: .bold))
+                    Image("scientist")
+                        .aspectRatio(contentMode: .fit)
+                    .offset(x: 0, y: -50)
+                }
+                .offset(x: 0, y: 40)
+            }.edgesIgnoringSafeArea(.top)
+                
+            
+            
+//                .position(x: 290, y: 700)
+            
+        }
+            
     }
 }
 
 struct TaskView_Previews: PreviewProvider {
     static var previews: some View {
-        TaskView()
+        TaskView(taskContent: TaskViewModel())
     }
 }
 
 
-struct TopHeader: View {
-    
-    var currentTab: String //used to pass the current tab name to the header
-    
-    init(currentTab: String) {
-        self.currentTab = currentTab
-    }
-    
-    var body: some View {
-        
-        VStack(spacing: 25){
-            HStack{
-                Text(currentTab)
-                    .fontWeight(.bold)
-                    .font(.system(size: 32))
-                    .foregroundColor(.white)
-                Spacer(minLength: 0)
-                
-//                Button(action: { // add image icons here if desired
-//
-//                })
-//                {
-//                    Image("") //insert image
-//                        .resizable()
-//                        .frame(width: 18, height: 18)
-//                        .foregroundColor(.white)
-//                }
-            }
-        }
-        .padding(.horizontal)
-        .padding(.top, 60) //replace magic number
-        .background(Color("Green1"))
-        
-    }
-}

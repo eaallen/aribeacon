@@ -14,7 +14,7 @@ struct MainNavigationView: View {
 //    @State var selectedTab: String
     
     init() {
-          UITabBar.appearance().backgroundColor = UIColor(hex: "#1ba689")
+        UITabBar.appearance().backgroundColor = Constants.tabColor
           UITabBar.appearance().tintColor = Constants.tintColor
           UITabBar.appearance().unselectedItemTintColor = Constants.tintColor
 //          self.selectedTab = selectedTab
@@ -24,7 +24,7 @@ struct MainNavigationView: View {
         ZStack {
             
             TabView(selection: $selection) {
-                TaskView() //change this view to the view that corresponds to the navitgation bar item
+                TaskView(taskContent: TaskViewModel()) //change this view to the view that corresponds to the navitgation bar item
                     .tabItem {
                         Label("Tasks", systemImage: "checklist")
                     }
@@ -64,6 +64,7 @@ struct MainNavigationView: View {
 private struct Constants {
     static let accentColor: Color = .black
     static let tintColor: UIColor = .white
+    static let tabColor: UIColor = UIColor(hex: "#1BA689")
 }
 
 struct NavigationView_Previews: PreviewProvider {

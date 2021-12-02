@@ -34,6 +34,9 @@
 		DBC44929275867B20075E6F1 /* AppSetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC44928275867B20075E6F1 /* AppSetupViewModel.swift */; };
 		DBC4492B275867D50075E6F1 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC4492A275867D50075E6F1 /* QRScannerView.swift */; };
 		DBC4492E275868760075E6F1 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = DBC4492D275868760075E6F1 /* CodeScanner */; };
+		DBFA0F4D275896B100E6F5E4 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA0F4C275896B100E6F5E4 /* TaskModel.swift */; };
+		DBFA0F5327589E9E00E6F5E4 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA0F5227589E9E00E6F5E4 /* TaskViewModel.swift */; };
+		DBFA0F552759386700E6F5E4 /* OldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA0F542759386700E6F5E4 /* OldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +88,9 @@
 		DBC44926275867950075E6F1 /* AppSetupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppSetupModel.swift; path = ARBeacon/Model/AppSetupModel.swift; sourceTree = SOURCE_ROOT; };
 		DBC44928275867B20075E6F1 /* AppSetupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppSetupViewModel.swift; path = ARBeacon/AppSetupViewModel.swift; sourceTree = SOURCE_ROOT; };
 		DBC4492A275867D50075E6F1 /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
+		DBFA0F4C275896B100E6F5E4 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		DBFA0F5227589E9E00E6F5E4 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		DBFA0F542759386700E6F5E4 /* OldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldView.swift; sourceTree = "<group>"; };
 		F8C7A5068A531FC6400B1288 /* Pods-ARBeacon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARBeacon.debug.xcconfig"; path = "Target Support Files/Pods-ARBeacon/Pods-ARBeacon.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,9 +146,9 @@
 		6819953E2743EE90007FA69F /* ARBeacon */ = {
 			isa = PBXGroup;
 			children = (
+				68B942872746B0CB0009D2F9 /* Model */,
 				68A2A86E2758B62E00D7A675 /* Beacon */,
 				68A2A86D2758B0F200D7A675 /* Info.plist */,
-				68A2A86C2758943F00D7A675 /* Model */,
 				68A2A865275892E900D7A675 /* ARModelAssets */,
 				DB83B1B027549B1500285BC9 /* Database */,
 				68B942862746B0C00009D2F9 /* ViewModel */,
@@ -189,11 +195,12 @@
 			path = ARModelAssets;
 			sourceTree = "<group>";
 		};
-		68A2A86C2758943F00D7A675 /* Model */ = {
+    68B942872746B0CB0009D2F9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DB83B1B027549B1500285BC9 /* Database */,
 				DBC44926275867950075E6F1 /* AppSetupModel.swift */,
-				68A2A86A2758940600D7A675 /* ARModelHandler.swift */,
+        68A2A86A2758940600D7A675 /* ARModelHandler.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -245,6 +252,7 @@
 		68B942862746B0C00009D2F9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DBFA0F5227589E9E00E6F5E4 /* TaskViewModel.swift */,
 				DBC44928275867B20075E6F1 /* AppSetupViewModel.swift */,
 			);
 			path = ViewModel;
@@ -264,6 +272,7 @@
 				DB83B1A5275474AB00285BC9 /* TabViews */,
 				DB83B18527546A9A00285BC9 /* MainNavigationView.swift */,
 				DBC4492A275867D50075E6F1 /* QRScannerView.swift */,
+				DBFA0F542759386700E6F5E4 /* OldView.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -284,6 +293,7 @@
 			children = (
 				68B9427A2743FAF10009D2F9 /* OpenTrivia.swift */,
 				DB83B1B127549B4300285BC9 /* ARDatabase.swift */,
+				DBFA0F4C275896B100E6F5E4 /* TaskModel.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -491,7 +501,10 @@
 				DB83B1AB275474F000285BC9 /* AccountView.swift in Sources */,
 				DB83B18627546A9B00285BC9 /* MainNavigationView.swift in Sources */,
 				68B9427E2743FB590009D2F9 /* StringUtils.swift in Sources */,
+				DBFA0F5327589E9E00E6F5E4 /* TaskViewModel.swift in Sources */,
 				681995422743EE90007FA69F /* AugmentedContentView.swift in Sources */,
+				DBFA0F552759386700E6F5E4 /* OldView.swift in Sources */,
+				DBFA0F4D275896B100E6F5E4 /* TaskModel.swift in Sources */,
 				68B942852746AF390009D2F9 /* IBeaconView.swift in Sources */,
 				681995402743EE90007FA69F /* AppDelegate.swift in Sources */,
 				681995442743EE90007FA69F /* Experience.rcproject in Sources */,

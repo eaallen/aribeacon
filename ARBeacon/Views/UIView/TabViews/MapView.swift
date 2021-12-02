@@ -12,6 +12,7 @@ struct MapView: View {
         VStack(spacing: 0) {
             TopHeader(currentTab: "Map")
             Spacer()
+            Image("scientist")
         }.edgesIgnoringSafeArea(.top)
     }
 }
