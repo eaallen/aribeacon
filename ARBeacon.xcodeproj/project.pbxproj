@@ -26,7 +26,11 @@
 		DB83B1AB275474F000285BC9 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB83B1AA275474F000285BC9 /* AccountView.swift */; };
 		DB83B1AD2754752400285BC9 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB83B1AC2754752400285BC9 /* MapView.swift */; };
 		DB83B1B227549B4300285BC9 /* ARDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB83B1B127549B4300285BC9 /* ARDatabase.swift */; };
-		DB83B1B52754A05500285BC9 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = DB83B1B42754A05500285BC9 /* GRDB */; };
+		DBC449252758676A0075E6F1 /* ColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC449242758676A0075E6F1 /* ColorHex.swift */; };
+		DBC44927275867950075E6F1 /* AppSetupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC44926275867950075E6F1 /* AppSetupModel.swift */; };
+		DBC44929275867B20075E6F1 /* AppSetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC44928275867B20075E6F1 /* AppSetupViewModel.swift */; };
+		DBC4492B275867D50075E6F1 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC4492A275867D50075E6F1 /* QRScannerView.swift */; };
+		DBC4492E275868760075E6F1 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = DBC4492D275868760075E6F1 /* CodeScanner */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +74,10 @@
 		DB83B1AA275474F000285BC9 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		DB83B1AC2754752400285BC9 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		DB83B1B127549B4300285BC9 /* ARDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDatabase.swift; sourceTree = "<group>"; };
+		DBC449242758676A0075E6F1 /* ColorHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHex.swift; sourceTree = "<group>"; };
+		DBC44926275867950075E6F1 /* AppSetupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppSetupModel.swift; path = ARBeacon/AppSetupModel.swift; sourceTree = SOURCE_ROOT; };
+		DBC44928275867B20075E6F1 /* AppSetupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppSetupViewModel.swift; path = ARBeacon/AppSetupViewModel.swift; sourceTree = SOURCE_ROOT; };
+		DBC4492A275867D50075E6F1 /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
 		F8C7A5068A531FC6400B1288 /* Pods-ARBeacon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARBeacon.debug.xcconfig"; path = "Target Support Files/Pods-ARBeacon/Pods-ARBeacon.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB83B1B52754A05500285BC9 /* GRDB in Frameworks */,
+				DBC4492E275868760075E6F1 /* CodeScanner in Frameworks */,
 				B22FD94DB7D2A6CBF381CC3F /* Pods_ARBeacon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				68B9427D2743FB590009D2F9 /* StringUtils.swift */,
+				DBC449242758676A0075E6F1 /* ColorHex.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -202,6 +211,7 @@
 		68B942862746B0C00009D2F9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DBC44928275867B20075E6F1 /* AppSetupViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -209,6 +219,7 @@
 		68B942872746B0CB0009D2F9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DBC44926275867950075E6F1 /* AppSetupModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -226,6 +237,7 @@
 			children = (
 				DB83B1A5275474AB00285BC9 /* TabViews */,
 				DB83B18527546A9A00285BC9 /* MainNavigationView.swift */,
+				DBC4492A275867D50075E6F1 /* QRScannerView.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -277,7 +289,7 @@
 			);
 			name = ARBeacon;
 			packageProductDependencies = (
-				DB83B1B42754A05500285BC9 /* GRDB */,
+				DBC4492D275868760075E6F1 /* CodeScanner */,
 			);
 			productName = ARBeacon;
 			productReference = 6819953C2743EE90007FA69F /* ARBeacon.app */;
@@ -352,7 +364,7 @@
 			);
 			mainGroup = 681995332743EE90007FA69F;
 			packageReferences = (
-				DB83B1B32754A05500285BC9 /* XCRemoteSwiftPackageReference "GRDB.swift" */,
+				DBC4492C275868760075E6F1 /* XCRemoteSwiftPackageReference "CodeScanner" */,
 			);
 			productRefGroup = 6819953D2743EE90007FA69F /* Products */;
 			projectDirPath = "";
@@ -438,11 +450,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBC44929275867B20075E6F1 /* AppSetupViewModel.swift in Sources */,
 				DB83B1A7275474C200285BC9 /* TaskView.swift in Sources */,
 				DB83B1AD2754752400285BC9 /* MapView.swift in Sources */,
 				68B942812746AE9F0009D2F9 /* ControlBoard.swift in Sources */,
 				68B9427B2743FAF10009D2F9 /* OpenTrivia.swift in Sources */,
 				DB83B1A9275474DA00285BC9 /* HelpView.swift in Sources */,
+				DBC44927275867950075E6F1 /* AppSetupModel.swift in Sources */,
+				DBC449252758676A0075E6F1 /* ColorHex.swift in Sources */,
 				DB83B1AB275474F000285BC9 /* AccountView.swift in Sources */,
 				DB83B18627546A9B00285BC9 /* MainNavigationView.swift in Sources */,
 				68B9427E2743FB590009D2F9 /* StringUtils.swift in Sources */,
@@ -451,6 +466,7 @@
 				681995402743EE90007FA69F /* AppDelegate.swift in Sources */,
 				681995442743EE90007FA69F /* Experience.rcproject in Sources */,
 				DB83B1B227549B4300285BC9 /* ARDatabase.swift in Sources */,
+				DBC4492B275867D50075E6F1 /* QRScannerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -811,21 +827,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DB83B1B32754A05500285BC9 /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
+		DBC4492C275868760075E6F1 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/groue/GRDB.swift.git";
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DB83B1B42754A05500285BC9 /* GRDB */ = {
+		DBC4492D275868760075E6F1 /* CodeScanner */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DB83B1B32754A05500285BC9 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
-			productName = GRDB;
+			package = DBC4492C275868760075E6F1 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
