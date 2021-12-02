@@ -19,7 +19,7 @@ struct TaskModel: TableRecord, FetchableRecord, PersistableRecord, Identifiable 
 
     struct Table {
         static let databaseTableName = "tasks"
-        
+
         static let id = "id"
         static let task_number = "task_number"
         static let task_name = "task_name"
@@ -44,7 +44,7 @@ struct TaskModel: TableRecord, FetchableRecord, PersistableRecord, Identifiable 
         task_description = row[Table.task_description]
         is_completed = row[Table.is_completed]
     }
-    
+
     init(id: Int, task_number: Int, task_name: String, task_description: String, is_completed: Bool) {
         self.id = id
         self.task_number = task_number
