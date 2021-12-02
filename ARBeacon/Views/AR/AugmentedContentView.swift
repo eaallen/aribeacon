@@ -7,11 +7,15 @@
 
 import SwiftUI
 import RealityKit
+import ARKit
 
 struct AugmentedContentView : View {
+    @State private var viewDidLoad = false
     var body: some View {
         // tap on the camera view to see AR block!
-        return ARViewContainer().edgesIgnoringSafeArea(.all)
+        return ARViewContainer().edgesIgnoringSafeArea(.all).onAppear(){
+            viewDidLoad.toggle()
+        }
     }
 }
 
@@ -21,21 +25,42 @@ struct ARViewContainer: UIViewRepresentable {
         
         let arView = ARView(frame: .zero)
         
-        // Load the "Box" scene from the "Experience" Reality File
-//        let boxAnchor = try! Experience.loadBox()
+        let config = ARWorldTrackingConfiguration()
+        config.planeDetection = [.horizontal, .vertical]
+        config.environmentTexturing = .automatic
         
-        //let plack = try! Experience.loadScene()
+        // not all versions of ios support this feature
+        if ARWorldTrackingConfiguration.supportsSceneReconstruction(.mesh){
+            config.sceneReconstruction = .mesh
+        }
         
-        let rona = try! Experience.loadRona()
+        arView.session.run(config)
         
-        // Add the box anchor to the scene
-        arView.scene.anchors.append(rona)
         
         return arView
         
     }
     
-    func updateUIView(_ uiView: ARView, context: Context) {}
+    func updateUIView(_ arView: ARView, context: Context) {
+        //let model = ARModelHandler(modelName: "covid19")
+        
+        // .loadModel is a synchronus method, will want to migrate to an async method for better rendering.
+        if let modelEntity = try? ModelEntity.loadModel(named: "covid19"){
+            // declare the layout of the object in the world absolutly in relation to the camera,
+            var layout = matrix_identity_float4x4
+            
+            layout.columns.3.x = 0
+            layout.columns.3.y = 0
+            layout.columns.3.z = -1
+            
+            let anchorEntity = AnchorEntity(world: layout)
+            anchorEntity.addChild(modelEntity.clone(recursive: true))
+            arView.scene.addAnchor(anchorEntity)
+       }else{
+            // model not avaliable
+            print("error loading covid19")
+       }
+    }
     
 }
 
