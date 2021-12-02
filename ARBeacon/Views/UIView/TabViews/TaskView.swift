@@ -9,14 +9,25 @@ import SwiftUI
 
 struct TaskView: View {
     
-//    @ObservedObject var appContent: AppSetupVM
+    @ObservedObject var taskContent: TaskViewModel
     
     var body: some View {
         
-        VStack(spacing: 0) {
-            TopHeader(currentTab: "Tasks")
-            Spacer()
-        }.edgesIgnoringSafeArea(.top)
+        ZStack {
+//            VStack(spacing: 0) {
+//                    TopHeader(currentTab: "Tasks")
+//                    Spacer()
+//            }.edgesIgnoringSafeArea(.top)
+            
+            ForEach(taskContent.tasks) { task in
+                Text(task.task_name)
+            }
+            .foregroundColor(.black)
+        }
+            
+            
+
+        
         
 //        ForEach(appContent.cards) { card in
     }
@@ -24,10 +35,9 @@ struct TaskView: View {
 
 struct TaskView_Previews: PreviewProvider {
     static var previews: some View {
-        TaskView()
+        TaskView(taskContent: TaskViewModel())
     }
 }
-
 
 struct TopHeader: View {
     
@@ -60,7 +70,11 @@ struct TopHeader: View {
         }
         .padding(.horizontal)
         .padding(.top, 60) //replace magic number
-        .background(Color("Green1"))
+        .background(Constants.headerColor)
         
     }
+}
+
+private struct Constants {
+    static let headerColor: Color = Color(hex: "#1ba689")
 }
