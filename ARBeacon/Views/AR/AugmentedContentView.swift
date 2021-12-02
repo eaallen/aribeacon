@@ -10,11 +10,30 @@ import RealityKit
 import ARKit
 
 struct AugmentedContentView : View {
-    @State private var viewDidLoad = false
+    @State private var showModel = false
+    @ObservedObject private var beaconDetector = BeaconDetector()
     var body: some View {
-        // tap on the camera view to see AR block!
-        return ARViewContainer().edgesIgnoringSafeArea(.all).onAppear(){
-            viewDidLoad.toggle()
+        
+        ZStack {
+            
+            ARViewContainer().edgesIgnoringSafeArea(.all)
+            Text(translateProximity(beaconDetector.beaconDistance))
+        }
+    }
+    
+    func translateProximity(_ distance: CLProximity)->String{
+        switch distance {
+        case .unknown:
+            return ""
+        case .far:
+            return "Warm"
+        case .near:
+            showModel.toggle()
+            return "Hot"
+        case .immediate:
+            return "You should look behind you."
+        default:
+            return ""
         }
     }
 }
@@ -50,8 +69,8 @@ struct ARViewContainer: UIViewRepresentable {
             var layout = matrix_identity_float4x4
             
             layout.columns.3.x = 0
-            layout.columns.3.y = 0
-            layout.columns.3.z = -1
+            layout.columns.3.y = 0.5
+            layout.columns.3.z = 2
             
             let anchorEntity = AnchorEntity(world: layout)
             anchorEntity.addChild(modelEntity.clone(recursive: true))
