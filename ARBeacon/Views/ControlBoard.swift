@@ -14,7 +14,7 @@ struct ControlBoard: View {
                 Form {
                     Section(header: Text("Pick an Experience")){
                         NavigationLink("Augment Your Reality", destination: {
-                            AugmentedContentView()
+                            MainNavigationView()
                         })
                         NavigationLink("ibeacons", destination: {
                             IBeaconView()
