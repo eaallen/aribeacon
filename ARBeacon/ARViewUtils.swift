@@ -23,11 +23,15 @@ extension ARView {
         
     }
     
-    func placeObject(named modelName: String, at position: SIMD3<Float>){
+    func placeObject(named modelName: String, at position: SIMD3<Float>, scaleTo: SIMD3<Float>? = nil){
         if let modelEntity = try? ModelEntity.loadModel(named: modelName){
             // all the model entity to colide
             modelEntity.generateCollisionShapes(recursive: true)
+                        
             let anchorEntity = AnchorEntity(world: position)
+            if let scale = scaleTo {
+                anchorEntity.scale = scale
+            }
             anchorEntity.addChild(modelEntity.clone(recursive: true))
             self.scene.addAnchor(anchorEntity)
             
