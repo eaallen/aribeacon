@@ -71,9 +71,8 @@ struct ARViewContainer: UIViewRepresentable {
             var layout = SIMD3<Float>()
             layout.x = 0
             layout.y = 0.5
-            layout.z = -0.5
-            let oneHalf = SIMD3<Float>(0.5,0.5,0.5)
-            arView.placeObject(named: "covid19", at: layout, scaleTo: oneHalf)
+            layout.z = -3
+            arView.placeObject(named: "covid19", at: layout)
         }
     }
     
