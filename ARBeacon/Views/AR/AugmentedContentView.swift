@@ -10,13 +10,15 @@ import RealityKit
 import ARKit
 
 struct AugmentedContentView : View {
-    @State private var showModel = false
     @ObservedObject private var beaconDetector = BeaconDetector()
+    @State var objectIsPlaced = false
     var body: some View {
         
         ZStack {
             
-            ARViewContainer().edgesIgnoringSafeArea(.all)
+            ARViewContainer(objectIsPlaced: $objectIsPlaced).edgesIgnoringSafeArea(.all).onTapGesture {
+                
+            }
             Text(translateProximity(beaconDetector.beaconDistance))
                 .font(.headline)
                 .padding()
@@ -31,9 +33,6 @@ struct AugmentedContentView : View {
         case .far:
             return "Warm"
         case .near:
-            if !showModel {
-                showModel = true
-            }
             return "Hot"
         case .immediate:
             return "You should look behind you."
@@ -44,10 +43,13 @@ struct AugmentedContentView : View {
 }
 
 struct ARViewContainer: UIViewRepresentable {
+    @Binding var objectIsPlaced: Bool
     
-    func makeUIView(context: Context) -> ARView {
+    func makeUIView(context: Context) -> ARGameView {
         
-        let arView = ARView(frame: .zero)
+        let arView = ARGameView(frame: .zero, cameraMode: .ar, automaticallyConfigureSession: true, tapHandler: Covid19TapHandler())
+        
+        arView.enableTapGesture()
         
         let config = ARWorldTrackingConfiguration()
         config.planeDetection = [.horizontal, .vertical]
@@ -60,31 +62,19 @@ struct ARViewContainer: UIViewRepresentable {
         
         arView.session.run(config)
         
-        
         return arView
-        
     }
     
-    func updateUIView(_ arView: ARView, context: Context) {
-        //let model = ARModelHandler(modelName: "covid19")
-        
-        // .loadModel is a synchronus method, will want to migrate to an async method for better rendering.
-        if let modelEntity = try? ModelEntity.loadModel(named: "covid19"){
+    func updateUIView(_ arView: ARGameView, context: Context) {
+        if !objectIsPlaced {
             // declare the layout of the object in the world absolutly in relation to the camera,
-            var layout = matrix_identity_float4x4
+            var layout = SIMD3<Float>()
+            layout.x = 0
+            layout.y = 0.5
+            layout.z = 2
             
-            layout.columns.3.x = 0
-            layout.columns.3.y = 0.5
-            layout.columns.3.z = 2
-            
-            
-            let anchorEntity = AnchorEntity(world: layout)
-            anchorEntity.addChild(modelEntity.clone(recursive: true))
-            arView.scene.addAnchor(anchorEntity)
-       }else{
-            // model not avaliable
-            print("error loading covid19")
-       }
+            arView.placeObject(named: "covid19", at: layout)
+        }
     }
     
 }

@@ -12,15 +12,17 @@ import Combine
 class ARModelHandler {
     var modelName: String
     var modelEntity: ModelEntity?
+    var filename: String
     
     private var cancellable: AnyCancellable? = nil
     
     init(modelName: String){
         self.modelName = modelName
-        
-        let filename = modelName + ".usdz"
-        
-        self.cancellable = ModelEntity.loadModelAsync(named: filename)
+        self.filename = modelName + ".usdz"
+    }
+    
+    func load(){
+        self.cancellable = ModelEntity.loadModelAsync(named: self.filename)
             .sink(receiveCompletion: { loadCompletion in
             
             }, receiveValue: { modelEntity in
