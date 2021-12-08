@@ -16,6 +16,7 @@
 		6819955D2743EE91007FA69F /* ARBeaconUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6819955C2743EE91007FA69F /* ARBeaconUITests.swift */; };
 		6819955F2743EE91007FA69F /* ARBeaconUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6819955E2743EE91007FA69F /* ARBeaconUITestsLaunchTests.swift */; };
 		68554F9827604FAB00E6B391 /* ARGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68554F9727604FAB00E6B391 /* ARGameView.swift */; };
+		68554F9A276066CB00E6B391 /* View+Navigate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68554F99276066CB00E6B391 /* View+Navigate.swift */; };
 		68A2A8672758930D00D7A675 /* covid19.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 68A2A8662758930D00D7A675 /* covid19.usdz */; };
 		68A2A86B2758940600D7A675 /* ARModelHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A2A86A2758940600D7A675 /* ARModelHandler.swift */; };
 		68A2A8702758B65300D7A675 /* BeaconDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A2A86F2758B65300D7A675 /* BeaconDetector.swift */; };
@@ -80,6 +81,7 @@
 		6819955C2743EE91007FA69F /* ARBeaconUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARBeaconUITests.swift; sourceTree = "<group>"; };
 		6819955E2743EE91007FA69F /* ARBeaconUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARBeaconUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		68554F9727604FAB00E6B391 /* ARGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARGameView.swift; sourceTree = "<group>"; };
+		68554F99276066CB00E6B391 /* View+Navigate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Navigate.swift"; sourceTree = "<group>"; };
 		68A2A8662758930D00D7A675 /* covid19.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = covid19.usdz; sourceTree = "<group>"; };
 		68A2A86A2758940600D7A675 /* ARModelHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ARModelHandler.swift; path = ARBeacon/Model/ARModelHandler.swift; sourceTree = SOURCE_ROOT; };
 		68A2A86D2758B0F200D7A675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				DBC449242758676A0075E6F1 /* ColorHex.swift */,
 				68A2A877275C1C5A00D7A675 /* UIColor+Random.swift */,
 				68A2A875275C13B100D7A675 /* ARViewUtils.swift */,
+				68554F99276066CB00E6B391 /* View+Navigate.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 				DB83B1A7275474C200285BC9 /* TaskView.swift in Sources */,
 				DB83B1AD2754752400285BC9 /* MapView.swift in Sources */,
 				68B942812746AE9F0009D2F9 /* ControlBoard.swift in Sources */,
+				68554F9A276066CB00E6B391 /* View+Navigate.swift in Sources */,
 				68B9427B2743FAF10009D2F9 /* OpenTrivia.swift in Sources */,
 				DBFA0F572759666900E6F5E4 /* TaskModel.swift in Sources */,
 				DB83B1A9275474DA00285BC9 /* HelpView.swift in Sources */,

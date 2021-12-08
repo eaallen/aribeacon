@@ -6,14 +6,29 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 
 
-
+/// Attempting to use ibeacons and navigation views to swithc to other view is prooving a little  buggy.
+/// I fear this functionality maybe out side of the SwiftUI usecase, and just another reason to make the switch over to UIKit.
 struct IBeaconView: View {
-
+    @ObservedObject private var beaconDetector = BeaconDetector()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            Text("This is the plain view!")
+        }
+        
+        
+        .navigate(to: AugmentedContentView(), when: $beaconDetector.shouldNavToAug)
+        .navigate(to: HQView(), when: $beaconDetector.shouldNavToHQ)
+        
+        .onAppear(perform: go)
+    }
+    
+    func go(){
+        print("GO!!!!")
+        beaconDetector.startScanning()
     }
 }
 
