@@ -5,7 +5,7 @@
 //  Created by Gove Allen on 12/4/21.
 //
 
-import Foundation
+import SwiftUI
 import ARKit
 import RealityKit
 
@@ -24,19 +24,28 @@ extension ARView {
     }
     
     func placeObject(named modelName: String, at position: SIMD3<Float>, scaleTo: SIMD3<Float>? = nil){
-        if let modelEntity = try? ModelEntity.loadModel(named: modelName){
-            // all the model entity to colide
-            modelEntity.generateCollisionShapes(recursive: true)
-                        
-            let anchorEntity = AnchorEntity(world: position)
-            if let scale = scaleTo {
-                anchorEntity.scale = scale
-            }
-            anchorEntity.addChild(modelEntity.clone(recursive: true))
-            self.scene.addAnchor(anchorEntity)
-            
-        }
+        let anchorEntity = AnchorEntity(world: position)
+        addModelEntityToAnchorThenScene(modelName: modelName, scaleTo: scaleTo, anchor: anchorEntity)
     }
     
+    func placeObject(named modelName: String, on target: AnchoringComponent.Target,  scaleTo: SIMD3<Float>? = nil){
+        let anchorEntity = AnchorEntity(target)
+        print("debug:", anchorEntity)
+        addModelEntityToAnchorThenScene(modelName: modelName, scaleTo: scaleTo, anchor: anchorEntity)
+    }
     
+    private func addModelEntityToAnchorThenScene(modelName:String, scaleTo: SIMD3<Float>?, anchor: AnchorEntity){
+        print(1)
+        if let modelEntity = try? ModelEntity.loadModel(named: modelName){
+            print(2)
+            modelEntity.generateCollisionShapes(recursive: true)
+            if let scale = scaleTo {
+                anchor.scale = scale
+            }
+            anchor.addChild(modelEntity)
+            self.scene.anchors.append(anchor)
+            
+            print(3)
+        }
+    }
 }

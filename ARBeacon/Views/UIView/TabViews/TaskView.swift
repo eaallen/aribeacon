@@ -19,6 +19,7 @@ struct TaskView: View {
                 Spacer()
                 List {
                     NavigationLink("Find the Covid Molecule", destination: AugmentedContentView())
+                    NavigationLink("Welcome to HQ!", destination: HQView())
                     ForEach(0..<50) { task in
                         NavigationLink("\(task)", destination: MapView())
                     }
