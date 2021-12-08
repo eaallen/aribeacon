@@ -42,7 +42,7 @@ struct MainNavigationView: View {
                 switch selection {
                 case 0: //Task View
 //                    NavigationView {
-                            TaskView(taskContent: TaskViewModel())
+                            TaskView(taskContent: ReadData())
 //                    }
                 case 1:
                     NavigationView {
