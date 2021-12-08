@@ -15,6 +15,7 @@
 		681995532743EE91007FA69F /* ARBeaconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681995522743EE91007FA69F /* ARBeaconTests.swift */; };
 		6819955D2743EE91007FA69F /* ARBeaconUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6819955C2743EE91007FA69F /* ARBeaconUITests.swift */; };
 		6819955F2743EE91007FA69F /* ARBeaconUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6819955E2743EE91007FA69F /* ARBeaconUITestsLaunchTests.swift */; };
+		68554F9827604FAB00E6B391 /* ARGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68554F9727604FAB00E6B391 /* ARGameView.swift */; };
 		68A2A8672758930D00D7A675 /* covid19.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 68A2A8662758930D00D7A675 /* covid19.usdz */; };
 		68A2A86B2758940600D7A675 /* ARModelHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A2A86A2758940600D7A675 /* ARModelHandler.swift */; };
 		68A2A8702758B65300D7A675 /* BeaconDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A2A86F2758B65300D7A675 /* BeaconDetector.swift */; };
@@ -24,6 +25,8 @@
 		68A2A878275C1C5A00D7A675 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A2A877275C1C5A00D7A675 /* UIColor+Random.swift */; };
 		68A2A87A275E3B8E00D7A675 /* ARModelOnTapHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A2A879275E3B8E00D7A675 /* ARModelOnTapHandler.swift */; };
 		68A2A87D275E4A4100D7A675 /* Covid19TapHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A2A87C275E4A4100D7A675 /* Covid19TapHandler.swift */; };
+		68A2A881275EE40F00D7A675 /* NeonXStickAni.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 68A2A880275EE40F00D7A675 /* NeonXStickAni.usdz */; };
+		68A2A883275F17E300D7A675 /* HQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A2A882275F17E300D7A675 /* HQView.swift */; };
 		68B9427B2743FAF10009D2F9 /* OpenTrivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B9427A2743FAF10009D2F9 /* OpenTrivia.swift */; };
 		68B9427E2743FB590009D2F9 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B9427D2743FB590009D2F9 /* StringUtils.swift */; };
 		68B942812746AE9F0009D2F9 /* ControlBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B942802746AE9F0009D2F9 /* ControlBoard.swift */; };
@@ -76,6 +79,7 @@
 		681995582743EE91007FA69F /* ARBeaconUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARBeaconUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6819955C2743EE91007FA69F /* ARBeaconUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARBeaconUITests.swift; sourceTree = "<group>"; };
 		6819955E2743EE91007FA69F /* ARBeaconUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARBeaconUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		68554F9727604FAB00E6B391 /* ARGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARGameView.swift; sourceTree = "<group>"; };
 		68A2A8662758930D00D7A675 /* covid19.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = covid19.usdz; sourceTree = "<group>"; };
 		68A2A86A2758940600D7A675 /* ARModelHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ARModelHandler.swift; path = ARBeacon/Model/ARModelHandler.swift; sourceTree = SOURCE_ROOT; };
 		68A2A86D2758B0F200D7A675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 		68A2A877275C1C5A00D7A675 /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
 		68A2A879275E3B8E00D7A675 /* ARModelOnTapHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARModelOnTapHandler.swift; sourceTree = "<group>"; };
 		68A2A87C275E4A4100D7A675 /* Covid19TapHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid19TapHandler.swift; sourceTree = "<group>"; };
+		68A2A880275EE40F00D7A675 /* NeonXStickAni.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = NeonXStickAni.usdz; sourceTree = "<group>"; };
+		68A2A882275F17E300D7A675 /* HQView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQView.swift; sourceTree = "<group>"; };
 		68B9427A2743FAF10009D2F9 /* OpenTrivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenTrivia.swift; sourceTree = "<group>"; };
 		68B9427D2743FB590009D2F9 /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		68B942802746AE9F0009D2F9 /* ControlBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlBoard.swift; sourceTree = "<group>"; };
@@ -203,6 +209,7 @@
 		68A2A865275892E900D7A675 /* ARModelAssets */ = {
 			isa = PBXGroup;
 			children = (
+				68A2A880275EE40F00D7A675 /* NeonXStickAni.usdz */,
 				68A2A8662758930D00D7A675 /* covid19.usdz */,
 			);
 			path = ARModelAssets;
@@ -250,6 +257,8 @@
 			isa = PBXGroup;
 			children = (
 				681995412743EE90007FA69F /* AugmentedContentView.swift */,
+				68A2A882275F17E300D7A675 /* HQView.swift */,
+				68554F9727604FAB00E6B391 /* ARGameView.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -453,6 +462,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68A2A881275EE40F00D7A675 /* NeonXStickAni.usdz in Resources */,
 				68A2A8672758930D00D7A675 /* covid19.usdz in Resources */,
 				681995492743EE91007FA69F /* Preview Assets.xcassets in Resources */,
 				681995462743EE91007FA69F /* Assets.xcassets in Resources */,
@@ -539,12 +549,14 @@
 				DB83B18627546A9B00285BC9 /* MainNavigationView.swift in Sources */,
 				68B9427E2743FB590009D2F9 /* StringUtils.swift in Sources */,
 				68A2A872275A6CF800D7A675 /* Brain.swift in Sources */,
+				68554F9827604FAB00E6B391 /* ARGameView.swift in Sources */,
 				68A2A87A275E3B8E00D7A675 /* ARModelOnTapHandler.swift in Sources */,
 				DBFA0F5327589E9E00E6F5E4 /* TaskViewModel.swift in Sources */,
 				681995422743EE90007FA69F /* AugmentedContentView.swift in Sources */,
 				68A2A87D275E4A4100D7A675 /* Covid19TapHandler.swift in Sources */,
 				DBFA0F552759386700E6F5E4 /* OldView.swift in Sources */,
 				68A2A876275C13B100D7A675 /* ARViewUtils.swift in Sources */,
+				68A2A883275F17E300D7A675 /* HQView.swift in Sources */,
 				68B942852746AF390009D2F9 /* IBeaconView.swift in Sources */,
 				681995402743EE90007FA69F /* AppDelegate.swift in Sources */,
 				681995442743EE90007FA69F /* Experience.rcproject in Sources */,
@@ -731,7 +743,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.eaallen.ARBeacon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eaallen.ARBeaconNew;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -769,7 +781,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.eaallen.ARBeacon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eaallen.ARBeaconNew;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
