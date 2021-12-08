@@ -43,9 +43,9 @@ struct AugmentedContentView : View {
         @Binding var objectIsPlaced: Bool
         
         func makeUIView(context: Context) -> ARGameView {
-            let arView = ARGameView(frame: .zero, cameraMode: .ar, automaticallyConfigureSession: true, tapHandler: Covid19TapHandler())
+            let arView = ARGameView(frame: .zero, cameraMode: .ar, automaticallyConfigureSession: true)
             
-            arView.enableTapGesture()
+            arView.enableTapGesture(handler: Covid19TapHandler())
             
             let config = ARWorldTrackingConfiguration()
             config.planeDetection = [.horizontal, .vertical]

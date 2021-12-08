@@ -30,22 +30,17 @@ extension ARView {
     
     func placeObject(named modelName: String, on target: AnchoringComponent.Target,  scaleTo: SIMD3<Float>? = nil){
         let anchorEntity = AnchorEntity(target)
-        print("debug:", anchorEntity)
         addModelEntityToAnchorThenScene(modelName: modelName, scaleTo: scaleTo, anchor: anchorEntity)
     }
     
     private func addModelEntityToAnchorThenScene(modelName:String, scaleTo: SIMD3<Float>?, anchor: AnchorEntity){
-        print(1)
         if let modelEntity = try? ModelEntity.loadModel(named: modelName){
-            print(2)
             modelEntity.generateCollisionShapes(recursive: true)
             if let scale = scaleTo {
                 anchor.scale = scale
             }
             anchor.addChild(modelEntity)
             self.scene.anchors.append(anchor)
-            
-            print(3)
         }
     }
 }
