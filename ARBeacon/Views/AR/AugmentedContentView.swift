@@ -13,15 +13,15 @@ struct AugmentedContentView : View {
     @ObservedObject private var beaconDetector = BeaconDetector()
     @State var objectIsPlaced = false
     var body: some View {
-        
         ZStack {
-            
             ARViewContainer(objectIsPlaced: $objectIsPlaced).edgesIgnoringSafeArea(.all)
             Text(translateProximity(beaconDetector.beaconDistance))
                 .font(.headline)
                 .padding()
                 .background(.white.opacity(0.5))
         }
+        .onAppear(perform: beaconDetector.startScanning)
+        .onDisappear(perform: beaconDetector.stopScanning)
     }
     
     func translateProximity(_ distance: CLProximity)->String {
