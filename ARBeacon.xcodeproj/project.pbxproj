@@ -40,7 +40,6 @@
 		DB7A7B2B275FEA8C0059C864 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = DB7A7B2A275FEA8C0059C864 /* test.json */; };
 		DB7A7B31276033370059C864 /* tasks.json in Resources */ = {isa = PBXBuildFile; fileRef = DB7A7B30276033370059C864 /* tasks.json */; };
 		DB7A7B3627607C270059C864 /* TaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7A7B3527607C270059C864 /* TaskRowView.swift */; };
-		DB7A7B3A276112C90059C864 /* IndexUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7A7B39276112C90059C864 /* IndexUtility.swift */; };
 		DB7A7B3C2761184F0059C864 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7A7B3B2761184F0059C864 /* WelcomeView.swift */; };
 		DB7A7B4027617BCC0059C864 /* ScientistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7A7B3F27617BCC0059C864 /* ScientistView.swift */; };
 		DB7A7B42276191960059C864 /* ContinueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7A7B41276191960059C864 /* ContinueButtonView.swift */; };
@@ -115,7 +114,6 @@
 		DB7A7B2A275FEA8C0059C864 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = SOURCE_ROOT; };
 		DB7A7B30276033370059C864 /* tasks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tasks.json; sourceTree = "<group>"; };
 		DB7A7B3527607C270059C864 /* TaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowView.swift; sourceTree = "<group>"; };
-		DB7A7B39276112C90059C864 /* IndexUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexUtility.swift; sourceTree = "<group>"; };
 		DB7A7B3B2761184F0059C864 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		DB7A7B3F27617BCC0059C864 /* ScientistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScientistView.swift; sourceTree = "<group>"; };
 		DB7A7B41276191960059C864 /* ContinueButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueButtonView.swift; sourceTree = "<group>"; };
@@ -170,6 +168,7 @@
 				6819953D2743EE90007FA69F /* Products */,
 				E13BA9A4EAA572EF6B1D8F71 /* Pods */,
 				9308526043D59C6A82C500E1 /* Frameworks */,
+				DBFB0A5027619ED700DEA056 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -263,7 +262,6 @@
 				DBC449242758676A0075E6F1 /* ColorHex.swift */,
 				68A2A877275C1C5A00D7A675 /* UIColor+Random.swift */,
 				68A2A875275C13B100D7A675 /* ARViewUtils.swift */,
-				DB7A7B39276112C90059C864 /* IndexUtility.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -380,6 +378,14 @@
 				68B9427A2743FAF10009D2F9 /* OpenTrivia.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		DBFB0A5027619ED700DEA056 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				68554F99276066CB00E6B391 /* View+Navigate.swift */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		E13BA9A4EAA572EF6B1D8F71 /* Pods */ = {
@@ -613,7 +619,6 @@
 				681995442743EE90007FA69F /* Experience.rcproject in Sources */,
 				DBC4492B275867D50075E6F1 /* QRScannerView.swift in Sources */,
 				DBFA0F592759667D00E6F5E4 /* ARDatabase.swift in Sources */,
-				DB7A7B3A276112C90059C864 /* IndexUtility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
