@@ -13,6 +13,7 @@ struct MapView: View {
             TopHeader(currentTab: "Map")
             Spacer()
             Image("scientist")
+            NavigationLink("Test!", destination: HelpView())
         }.edgesIgnoringSafeArea(.top)
     }
 }

@@ -11,67 +11,43 @@ struct TaskView: View {
     
     @ObservedObject var taskContent = ReadData()
     @State private var showAlert = false
+//    @State private var isEnabled = true
+    
+//    init(){
+//        UITableView.appearance().backgroundColor = .clear
+//    }
     
     var body: some View {
         
         ZStack {
             VStack {
+                // MARK: - Header
                 VStack(spacing: 0) {
-
                     TopHeader(currentTab: "Tasks")
-                    //          Spacer()
-
                 }.edgesIgnoringSafeArea(.top)
-
+                
+                // MARK: - Main View
+                
                 List {
                     //loop through Tasks
                     ForEach(taskContent.tasks) { task in
-                        NavigationLink("\(task.taskName)", destination: MapView())
-                    }
-
-                }//.offset(x: 0, y: -50)
-
-                HStack {
-                    VStack {
-                        Button("Continue") {
-                            showAlert = true
+                        if task.dependsOn == nil {
+                            TaskRowView(taskId: task.taskId, taskName: task.taskName, isCompleted: task.isCompleted, isEnabled: true)
+                        } else {
+//                            if let index = taskContent.tasks.firstIndex(where: {$0.taskId == task.dependsOn})
+//                                taskContent.tasks[index].dependsOn
+                            TaskRowView(taskId: task.taskId, taskName: task.taskName, isCompleted: task.isCompleted, isEnabled: false)
                         }
-                        .alert(isPresented: $showAlert) {
-                            Alert(
-                                title: Text("Good Job!"),
-                                message: Text("Keep up the " + "good work")
-                            )
-                        }
-                        .foregroundColor(Constants.customOrange)
-                        .font(.system(size: 42))
-//              .clipShape(Circle().foregroundColor(Constants.customOrange))
-//              .overlay(Circle().stroke(Color.black, lineWidth: 4))
-
-                        Text("Complete the tasks to help stop Covid-19")
-                            .padding()
-                            .font(.system(size: 18, weight: .bold))
                     }
-
-                    Image("scientist")
-                        .aspectRatio(contentMode: .fit)
-                        .offset(x: 0, y: -50)
                 }
-                .offset(x: 0, y: 40)
+                .offset(x: 0, y: -50)
+                .padding(.bottom, 10)
+                .overlay(ScientistView(displayText: "Complete the tasks to help stop Covid-19"), alignment: .bottomTrailing)
             }
-//        .position(x: 290, y: 700)
+            .background(.clear)
         }
     }
 }
-
-struct TaskView_Previews: PreviewProvider {
-
-    static var previews: some View {
-
-        TaskView(taskContent: ReadData())
-
-    }
-}
-
 
 private struct Constants {
     static let tintColor: Color = .black
@@ -81,4 +57,5 @@ private struct Constants {
     static let customBlue: Color = Color(hex: "#41c1c0")
     static let customLightBlue: Color = Color(hex: "#d0ecef")
     static let customOrange: Color = Color(hex: "#fbcbab")
+    static let cornerRadius: CGFloat = 15
 }
