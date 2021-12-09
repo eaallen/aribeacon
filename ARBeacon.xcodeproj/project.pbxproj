@@ -262,6 +262,7 @@
 				DBC449242758676A0075E6F1 /* ColorHex.swift */,
 				68A2A877275C1C5A00D7A675 /* UIColor+Random.swift */,
 				68A2A875275C13B100D7A675 /* ARViewUtils.swift */,
+				68554F9A276066CB00E6B391 /* View+Navigate.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
