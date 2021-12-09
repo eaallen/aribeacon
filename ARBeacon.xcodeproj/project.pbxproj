@@ -171,8 +171,8 @@
 				68A2A865275892E900D7A675 /* ARModelAssets */,
 				68B942862746B0C00009D2F9 /* ViewModel */,
 				68B9427F2746AE740009D2F9 /* Views */,
-				68B9427C2743FB3B0009D2F9 /* Utils */,
 				6819953F2743EE90007FA69F /* AppDelegate.swift */,
+				68554FE12761B00200E6B391 /* Utils */,
 				681995452743EE91007FA69F /* Assets.xcassets */,
 				681995472743EE91007FA69F /* Preview Content */,
 				68A2A86D2758B0F200D7A675 /* Info.plist */,
@@ -205,6 +205,18 @@
 			path = ARBeaconUITests;
 			sourceTree = "<group>";
 		};
+		68554FE12761B00200E6B391 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				68B9427D2743FB590009D2F9 /* StringUtils.swift */,
+				DBC449242758676A0075E6F1 /* ColorHex.swift */,
+				68A2A877275C1C5A00D7A675 /* UIColor+Random.swift */,
+				68A2A875275C13B100D7A675 /* ARViewUtils.swift */,
+				68554F99276066CB00E6B391 /* View+Navigate.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		68A2A865275892E900D7A675 /* ARModelAssets */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,18 +240,6 @@
 				68A2A87C275E4A4100D7A675 /* Covid19TapHandler.swift */,
 			);
 			path = TapHandlers;
-			sourceTree = "<group>";
-		};
-		68B9427C2743FB3B0009D2F9 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				68B9427D2743FB590009D2F9 /* StringUtils.swift */,
-				DBC449242758676A0075E6F1 /* ColorHex.swift */,
-				68A2A877275C1C5A00D7A675 /* UIColor+Random.swift */,
-				68A2A875275C13B100D7A675 /* ARViewUtils.swift */,
-				68554F99276066CB00E6B391 /* View+Navigate.swift */,
-			);
-			name = Utils;
 			sourceTree = "<group>";
 		};
 		68B9427F2746AE740009D2F9 /* Views */ = {
