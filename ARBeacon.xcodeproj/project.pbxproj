@@ -32,6 +32,16 @@
 		68B942812746AE9F0009D2F9 /* ControlBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B942802746AE9F0009D2F9 /* ControlBoard.swift */; };
 		68B942852746AF390009D2F9 /* IBeaconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B942842746AF390009D2F9 /* IBeaconView.swift */; };
 		B22FD94DB7D2A6CBF381CC3F /* Pods_ARBeacon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38397B08D473411B4D5A5DC0 /* Pods_ARBeacon.framework */; };
+		DB7A7B22275F37650059C864 /* TaskJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7A7B21275F37650059C864 /* TaskJSON.swift */; };
+		DB7A7B24275F3C540059C864 /* ReadJsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7A7B23275F3C540059C864 /* ReadJsonData.swift */; };
+		DB7A7B27275FE76F0059C864 /* JsonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7A7B26275FE76F0059C864 /* JsonTest.swift */; };
+		DB7A7B29275FE79C0059C864 /* JsonTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7A7B28275FE79C0059C864 /* JsonTestModel.swift */; };
+		DB7A7B2B275FEA8C0059C864 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = DB7A7B2A275FEA8C0059C864 /* test.json */; };
+		DB7A7B31276033370059C864 /* tasks.json in Resources */ = {isa = PBXBuildFile; fileRef = DB7A7B30276033370059C864 /* tasks.json */; };
+		DB7A7B3627607C270059C864 /* TaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7A7B3527607C270059C864 /* TaskRowView.swift */; };
+		DB7A7B3C2761184F0059C864 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7A7B3B2761184F0059C864 /* WelcomeView.swift */; };
+		DB7A7B4027617BCC0059C864 /* ScientistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7A7B3F27617BCC0059C864 /* ScientistView.swift */; };
+		DB7A7B42276191960059C864 /* ContinueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7A7B41276191960059C864 /* ContinueButtonView.swift */; };
 		DB83B18627546A9B00285BC9 /* MainNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB83B18527546A9A00285BC9 /* MainNavigationView.swift */; };
 		DB83B1A7275474C200285BC9 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB83B1A6275474C200285BC9 /* TaskView.swift */; };
 		DB83B1A9275474DA00285BC9 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB83B1A8275474DA00285BC9 /* HelpView.swift */; };
@@ -41,7 +51,6 @@
 		DBC44927275867950075E6F1 /* AppSetupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC44926275867950075E6F1 /* AppSetupModel.swift */; };
 		DBC44929275867B20075E6F1 /* AppSetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC44928275867B20075E6F1 /* AppSetupViewModel.swift */; };
 		DBC4492B275867D50075E6F1 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC4492A275867D50075E6F1 /* QRScannerView.swift */; };
-		DBC4492E275868760075E6F1 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = DBC4492D275868760075E6F1 /* CodeScanner */; };
 		DBFA0F5327589E9E00E6F5E4 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA0F5227589E9E00E6F5E4 /* TaskViewModel.swift */; };
 		DBFA0F552759386700E6F5E4 /* OldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA0F542759386700E6F5E4 /* OldView.swift */; };
 		DBFA0F572759666900E6F5E4 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA0F562759666900E6F5E4 /* TaskModel.swift */; };
@@ -96,6 +105,16 @@
 		68B9427D2743FB590009D2F9 /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		68B942802746AE9F0009D2F9 /* ControlBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlBoard.swift; sourceTree = "<group>"; };
 		68B942842746AF390009D2F9 /* IBeaconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBeaconView.swift; sourceTree = "<group>"; };
+		DB7A7B21275F37650059C864 /* TaskJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskJSON.swift; sourceTree = "<group>"; };
+		DB7A7B23275F3C540059C864 /* ReadJsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadJsonData.swift; sourceTree = "<group>"; };
+		DB7A7B26275FE76F0059C864 /* JsonTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonTest.swift; sourceTree = "<group>"; };
+		DB7A7B28275FE79C0059C864 /* JsonTestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonTestModel.swift; sourceTree = "<group>"; };
+		DB7A7B2A275FEA8C0059C864 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = SOURCE_ROOT; };
+		DB7A7B30276033370059C864 /* tasks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tasks.json; sourceTree = "<group>"; };
+		DB7A7B3527607C270059C864 /* TaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowView.swift; sourceTree = "<group>"; };
+		DB7A7B3B2761184F0059C864 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		DB7A7B3F27617BCC0059C864 /* ScientistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScientistView.swift; sourceTree = "<group>"; };
+		DB7A7B41276191960059C864 /* ContinueButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueButtonView.swift; sourceTree = "<group>"; };
 		DB83B18527546A9A00285BC9 /* MainNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationView.swift; sourceTree = "<group>"; };
 		DB83B1A6275474C200285BC9 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		DB83B1A8275474DA00285BC9 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
@@ -117,7 +136,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBC4492E275868760075E6F1 /* CodeScanner in Frameworks */,
 				B22FD94DB7D2A6CBF381CC3F /* Pods_ARBeacon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +166,7 @@
 				6819953D2743EE90007FA69F /* Products */,
 				E13BA9A4EAA572EF6B1D8F71 /* Pods */,
 				9308526043D59C6A82C500E1 /* Frameworks */,
+				DBFB0A5027619ED700DEA056 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +183,7 @@
 		6819953E2743EE90007FA69F /* ARBeacon */ = {
 			isa = PBXGroup;
 			children = (
+				DB7A7B25275FE7550059C864 /* UI Tests */,
 				68A2A87B275E4A1500D7A675 /* TapHandlers */,
 				DBFA0F5A275966D900E6F5E4 /* Database */,
 				68B942872746B0CB0009D2F9 /* Model */,
@@ -176,6 +196,8 @@
 				681995452743EE91007FA69F /* Assets.xcassets */,
 				681995472743EE91007FA69F /* Preview Content */,
 				68A2A86D2758B0F200D7A675 /* Info.plist */,
+				DB7A7B30276033370059C864 /* tasks.json */,
+				DB7A7B2A275FEA8C0059C864 /* test.json */,
 			);
 			path = ARBeacon;
 			sourceTree = "<group>";
@@ -276,6 +298,7 @@
 			children = (
 				DBFA0F5227589E9E00E6F5E4 /* TaskViewModel.swift */,
 				DBC44928275867B20075E6F1 /* AppSetupViewModel.swift */,
+				DB7A7B23275F3C540059C864 /* ReadJsonData.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -301,13 +324,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DB7A7B25275FE7550059C864 /* UI Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DBFA0F542759386700E6F5E4 /* OldView.swift */,
+				DB7A7B26275FE76F0059C864 /* JsonTest.swift */,
+				DB7A7B28275FE79C0059C864 /* JsonTestModel.swift */,
+			);
+			path = "UI Tests";
+			sourceTree = "<group>";
+		};
 		DB83B18427546A6300285BC9 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
 				DB83B1A5275474AB00285BC9 /* TabViews */,
 				DB83B18527546A9A00285BC9 /* MainNavigationView.swift */,
 				DBC4492A275867D50075E6F1 /* QRScannerView.swift */,
-				DBFA0F542759386700E6F5E4 /* OldView.swift */,
+				DB7A7B3B2761184F0059C864 /* WelcomeView.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -316,9 +349,12 @@
 			isa = PBXGroup;
 			children = (
 				DB83B1A6275474C200285BC9 /* TaskView.swift */,
+				DB7A7B3527607C270059C864 /* TaskRowView.swift */,
 				DB83B1A8275474DA00285BC9 /* HelpView.swift */,
 				DB83B1AA275474F000285BC9 /* AccountView.swift */,
 				DB83B1AC2754752400285BC9 /* MapView.swift */,
+				DB7A7B3F27617BCC0059C864 /* ScientistView.swift */,
+				DB7A7B41276191960059C864 /* ContinueButtonView.swift */,
 			);
 			path = TabViews;
 			sourceTree = "<group>";
@@ -328,6 +364,7 @@
 			children = (
 				DBFA0F562759666900E6F5E4 /* TaskModel.swift */,
 				DBFA0F582759667D00E6F5E4 /* ARDatabase.swift */,
+				DB7A7B21275F37650059C864 /* TaskJSON.swift */,
 			);
 			name = ARDatabase;
 			path = ../ARDatabase;
@@ -339,6 +376,14 @@
 				68B9427A2743FAF10009D2F9 /* OpenTrivia.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		DBFB0A5027619ED700DEA056 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				68554F99276066CB00E6B391 /* View+Navigate.swift */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		E13BA9A4EAA572EF6B1D8F71 /* Pods */ = {
@@ -369,7 +414,6 @@
 			);
 			name = ARBeacon;
 			packageProductDependencies = (
-				DBC4492D275868760075E6F1 /* CodeScanner */,
 			);
 			productName = ARBeacon;
 			productReference = 6819953C2743EE90007FA69F /* ARBeacon.app */;
@@ -464,8 +508,10 @@
 			files = (
 				68A2A881275EE40F00D7A675 /* NeonXStickAni.usdz in Resources */,
 				68A2A8672758930D00D7A675 /* covid19.usdz in Resources */,
+				DB7A7B2B275FEA8C0059C864 /* test.json in Resources */,
 				681995492743EE91007FA69F /* Preview Assets.xcassets in Resources */,
 				681995462743EE91007FA69F /* Assets.xcassets in Resources */,
+				DB7A7B31276033370059C864 /* tasks.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +582,8 @@
 				68A2A8702758B65300D7A675 /* BeaconDetector.swift in Sources */,
 				DB83B1A7275474C200285BC9 /* TaskView.swift in Sources */,
 				DB83B1AD2754752400285BC9 /* MapView.swift in Sources */,
+				DB7A7B22275F37650059C864 /* TaskJSON.swift in Sources */,
+				DB7A7B27275FE76F0059C864 /* JsonTest.swift in Sources */,
 				68B942812746AE9F0009D2F9 /* ControlBoard.swift in Sources */,
 				68554F9A276066CB00E6B391 /* View+Navigate.swift in Sources */,
 				68B9427B2743FAF10009D2F9 /* OpenTrivia.swift in Sources */,
@@ -543,12 +591,17 @@
 				DB83B1A9275474DA00285BC9 /* HelpView.swift in Sources */,
 				68A2A878275C1C5A00D7A675 /* UIColor+Random.swift in Sources */,
 				DBC44927275867950075E6F1 /* AppSetupModel.swift in Sources */,
+				DB7A7B24275F3C540059C864 /* ReadJsonData.swift in Sources */,
+				DB7A7B3627607C270059C864 /* TaskRowView.swift in Sources */,
+				DB7A7B42276191960059C864 /* ContinueButtonView.swift in Sources */,
 				68A2A86B2758940600D7A675 /* ARModelHandler.swift in Sources */,
 				DBC449252758676A0075E6F1 /* ColorHex.swift in Sources */,
 				DB83B1AB275474F000285BC9 /* AccountView.swift in Sources */,
 				68A2A874275A707B00D7A675 /* Interaction.swift in Sources */,
 				DB83B18627546A9B00285BC9 /* MainNavigationView.swift in Sources */,
+				DB7A7B4027617BCC0059C864 /* ScientistView.swift in Sources */,
 				68B9427E2743FB590009D2F9 /* StringUtils.swift in Sources */,
+				DB7A7B3C2761184F0059C864 /* WelcomeView.swift in Sources */,
 				68A2A872275A6CF800D7A675 /* Brain.swift in Sources */,
 				68554F9827604FAB00E6B391 /* ARGameView.swift in Sources */,
 				68A2A87A275E3B8E00D7A675 /* ARModelOnTapHandler.swift in Sources */,
@@ -556,6 +609,7 @@
 				681995422743EE90007FA69F /* AugmentedContentView.swift in Sources */,
 				68A2A87D275E4A4100D7A675 /* Covid19TapHandler.swift in Sources */,
 				DBFA0F552759386700E6F5E4 /* OldView.swift in Sources */,
+				DB7A7B29275FE79C0059C864 /* JsonTestModel.swift in Sources */,
 				68A2A876275C13B100D7A675 /* ARViewUtils.swift in Sources */,
 				68A2A883275F17E300D7A675 /* HQView.swift in Sources */,
 				68B942852746AF390009D2F9 /* IBeaconView.swift in Sources */,
@@ -724,7 +778,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ARBeacon/Preview Content\"";
-				DEVELOPMENT_TEAM = DP8A74YR7Z;
+				DEVELOPMENT_TEAM = KJAZ5NGQ72;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ARBeacon/Info.plist;
@@ -762,7 +816,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ARBeacon/Preview Content\"";
-				DEVELOPMENT_TEAM = DP8A74YR7Z;
+				DEVELOPMENT_TEAM = KJAZ5NGQ72;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ARBeacon/Info.plist;
@@ -937,14 +991,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		DBC4492D275868760075E6F1 /* CodeScanner */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DBC4492C275868760075E6F1 /* XCRemoteSwiftPackageReference "CodeScanner" */;
-			productName = CodeScanner;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 681995342743EE90007FA69F /* Project object */;
 }
