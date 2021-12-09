@@ -8,6 +8,7 @@
 import Foundation
 import CoreLocation
 import Combine
+import SwiftUI
 
 
 
@@ -15,8 +16,11 @@ import Combine
 class BeaconDetector: NSObject, ObservableObject, CLLocationManagerDelegate {
     var locationManager: CLLocationManager?
     var lastDistance = CLProximity.unknown
+    var isScanning = false
     @Published var beaconDistance : CLProximity = .unknown
-    
+    @Published var beaconDistances : [CLProximity] = []
+    @Published var shouldNavToHQ = false
+    @Published var shouldNavToAug = false
     override init(){
         super.init()
         
@@ -30,32 +34,51 @@ class BeaconDetector: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        print("auth 1")
         if status == .authorizedAlways || status == .authorizedWhenInUse {
-            print("auth 2")
-
             guard CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self) else {return beaconsWereNotGivenPermission()}
-            print("auth 3")
-
             guard CLLocationManager.isRangingAvailable() else {return beaconsWereNotGivenPermission()}
-            print("auth 4")
-
-            startScanning()
         }else {
             beaconsWereNotGivenPermission()
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
-        if beacons.count > 0 {
-            updateDistance(beacons[0].proximity)
-        } else {
-            updateDistance(.unknown)
+        if isScanning {
+            if beacons.count > 0 {
+                updateDistance(beacons[0].proximity)
+            } else {
+                updateDistance(.unknown)
+            }
         }
     }
     
+    // MARK: - Helper Methods
+    
     func updateDistance(_ distance: CLProximity) {
         beaconDistance = distance
+        beaconDistances.insert(distance, at: 0)
+        
+        // check for range counts
+        shouldNavToHQ = isConsecutiveMatch(distance: .immediate, count: 3) && !shouldNavToAug
+        shouldNavToAug = isConsecutiveMatch(distance: .near, count: 3) && !shouldNavToHQ
+        
+        // if either of these is true, we need to stop scanning
+        if shouldNavToHQ || shouldNavToAug {
+            stopScanning()
+        }
+    }
+    
+    func isConsecutiveMatch(distance: CLProximity, count: Int) -> Bool{
+        if count > beaconDistances.count {
+            return false
+        }
+        
+        for index in 0 ..< count {
+            if beaconDistances[index] != distance {
+                return false
+            }
+        }
+        return true
     }
     
     func beaconsWereNotGivenPermission(){
@@ -64,14 +87,20 @@ class BeaconDetector: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
     
     func startScanning() {
-        print("scanning started! 1")
         let uuid = UUID(uuidString: "CC6ED3C0-477E-417B-81E1-0A62D6504061")!
-        print("scanning started! 2")
         let beaconRegion = CLBeaconRegion()
-        
         locationManager?.startMonitoring(for: beaconRegion)
-        print("scanning started! 3")
         locationManager?.startRangingBeacons(satisfying: .init(uuid: uuid))
-        print("scanning started 4")
+        isScanning = true
+        shouldNavToHQ = false
+        shouldNavToAug = false
+    }
+    
+    func stopScanning(){
+        let uuid = UUID(uuidString: "CC6ED3C0-477E-417B-81E1-0A62D6504061")!
+        let beaconRegion = CLBeaconRegion()
+        locationManager?.stopMonitoring(for: beaconRegion)
+        locationManager?.stopRangingBeacons(satisfying: .init(uuid: uuid))
+        isScanning = false
     }
 }
